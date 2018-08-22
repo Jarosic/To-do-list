@@ -1,0 +1,13 @@
+<div class="col-xs-8 col-xs-offset-2">
+  <h1>My To Do List</h1>
+  <app-list-operation></app-list-operation>
+  <div class="list-group">
+    <app-list 
+    *ngFor="let toDo of list" 
+    [toDo]="toDo"
+    (deleteList)="onDeleteList($event)"></app-list> 
+  </div>
+</div>
+
+
+

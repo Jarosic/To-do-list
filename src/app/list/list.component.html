@@ -1,0 +1,14 @@
+<div [ngClass]="getClass()">
+<h4 [ngStyle]="{ marginBottom: '20px' }">{{ toDo.name }}</h4>
+  <div>
+    <button 
+      class="btn btn-sm btn-primary"
+      [disabled]="toDo.status"
+      (click)="onAction('done')">Done</button>
+    <button 
+      class="btn btn-sm btn-default"
+      [disabled]="!toDo.status"
+      (click)="onAction('return')">Return</button>
+      <button class="btn btn-danger" (click)="onDelete(toDo)">Delete</button>
+  </div>
+</div>
